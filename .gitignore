@@ -19,7 +19,7 @@ out/
 ## ProjectSetting ###
 /gradlew
 /gradlew.bat
-/setting.gradle
+/settings.gradle
 /gradle
 
 
