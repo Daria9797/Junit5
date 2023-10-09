@@ -30,7 +30,6 @@ public class ParametraizingTests extends TestBase{
 
     }
 
-
     @ValueSource(strings = {
             "Piano",
             "Guitar",
@@ -42,9 +41,7 @@ public class ParametraizingTests extends TestBase{
         open("/tools");
         $(".article__content").shouldHave(Condition.text(tool));
 
-
-}
-
+    }
 
     static Stream<Arguments> methodSourceExampleTest() {
         return Stream.of(
@@ -59,7 +56,6 @@ public class ParametraizingTests extends TestBase{
     @Tags({@Tag("BLOCKER"),@Tag("SMOKE")})
     void  subsectionHasSubmits(String tool,List<String> submits){
         open("/tools");
-        //$(byTagAndText("h2",tool)).click();
         $$(".article__column__box h2").findBy(Condition.text(tool)).click();
         $$(".buttons-module button").shouldHave(CollectionCondition.texts(submits));
     }
